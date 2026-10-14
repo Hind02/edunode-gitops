@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: edunode
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Hind02/edunode-gitops.git
+    targetRevision: main
+    path: apps/edunode
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: edunode
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
