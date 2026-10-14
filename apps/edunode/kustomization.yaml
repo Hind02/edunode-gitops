@@ -11,6 +11,6 @@ resources:
 # Jenkins (etape 9) ne modifie que ces deux lignes "newTag".
 images:
   - name: hind02/edunode-backend
-    newTag: "40"
+    newTag: "42"
   - name: hind02/edunode-frontend
-    newTag: "40"
+    newTag: "42"
